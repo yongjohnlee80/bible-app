@@ -107,5 +107,7 @@
       }
     }
   },
-  "defaultProject": "bible"
+  "cli": {
+    "analytics": false
+  }
 }
