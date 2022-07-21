@@ -49,6 +49,23 @@
 
 <app-bible-content></app-bible-content>
 
+<!-- Footer -->
+
+<hr class="mt-20">
+<div class="text-lg text-white text-center mt-2 mb-20">
+    <p class="text-green-200 mb-8">This site is powered by Angular13, Firebase, TailwindCSS, ngxMask, and bible-api.com APIs</p>
+    <a
+        class="text-center"
+        href="https://www.yongsunglee.com"
+        target="_blank"
+        rel="noreferrer"
+    >
+        <p>Developed by Yong Sung John Lee</p>
+    </a>
+</div>
+
+<!-- Authentication Modal -->
+
 <app-auth-modal
     *ngIf="!(auth.isAuthenticatedWithDelay$ | async)"
 ></app-auth-modal>
