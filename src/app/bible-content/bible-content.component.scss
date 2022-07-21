@@ -1,0 +1,28 @@
+.enter-fade {
+    animation: fadeIn 1.5s ease-in;
+}
+
+.exit-fade {
+    animation: fadeOut .5s ease-in;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-100%);
+
+    }
+}

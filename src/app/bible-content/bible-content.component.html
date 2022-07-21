@@ -34,6 +34,9 @@
 >
     {{ selectedBook }} : {{ selectedChapter }}
 </h1>
-<div class="w-3/4 mx-auto text-gray-400 text-xl">
+<div *ngIf="showText" class="w-3/4 mx-auto text-gray-400 text-xl enter-fade">
+    <p>{{text}}</p>
+</div>
+<div *ngIf="!showText" class="w-3/4 mx-auto text-gray-400 text-xl exit-fade">
     <p>{{text}}</p>
 </div>

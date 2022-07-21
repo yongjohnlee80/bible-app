@@ -13,6 +13,7 @@ export class BibleContentComponent implements OnInit {
     public selectedBook = '';
     public selectedChapter = 1;
     public text = '';
+    public showText = false;
 
     constructor() {
         this.books = BibleBooks;
@@ -22,6 +23,7 @@ export class BibleContentComponent implements OnInit {
     }
 
     bookSelected($event: Event) {
+        this.showText = false;
         this.selectedBook = ($event.target as HTMLInputElement).value;
         let book = this.books.find((book) => book.name === this.selectedBook);
         if (book === undefined) {
@@ -34,6 +36,8 @@ export class BibleContentComponent implements OnInit {
     }
 
     chapterSelected($event: Event) {
+        this.showText = false;
+
         console.log(($event.target as HTMLInputElement).value);
         this.selectedChapter = +($event.target as HTMLInputElement).value;
         this.retrieveBibleText();
@@ -41,7 +45,10 @@ export class BibleContentComponent implements OnInit {
 
     async retrieveBibleText() {
         await httpGetBibleText(this.selectedBook, this.selectedChapter).then(
-            (result) => (this.text = result.text)
+            (result) => {
+                this.text = result.text;
+                this.showText = true;
+            }
         );
     }
 
