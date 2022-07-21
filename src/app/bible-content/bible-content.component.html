@@ -13,7 +13,7 @@
         </select>
     </div>
     <div>
-        <label for="chapter-select" class="mr-4">Choose a chapter:</label>
+        <label for="chapter-select" class="mr-4">Chapter:</label>
         <select
             name="chapter"
             id="chapter-select"
@@ -21,7 +21,7 @@
             (change)="chapterSelected($event)"
         >
             <option
-                [value]="i + 1"
+                [value]="i + 1" [selected]="i+1 === selectedChapter"
                 *ngFor="let chapter of chapters; let i = index"
             >
                 Chapter {{ i + 1 }}

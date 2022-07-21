@@ -32,14 +32,17 @@ export class BibleContentComponent implements OnInit {
             this.selectedChapter = 1;
         }
         this.chapters = new Array<Number>(book.lastChapter);
+        if(this.selectedChapter > book.lastChapter) {
+            this.selectedChapter = +book.lastChapter;
+        }
         this.retrieveBibleText();
     }
 
     chapterSelected($event: Event) {
         this.showText = false;
 
-        console.log(($event.target as HTMLInputElement).value);
         this.selectedChapter = +($event.target as HTMLInputElement).value;
+        this.selectedChapter <= 0? 1: this.selectedChapter;
         this.retrieveBibleText();
     }
 
