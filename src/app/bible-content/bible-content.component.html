@@ -1,0 +1,34 @@
+<div class="flex w-3/4 mx-auto text-gray-300 p-4 text-xl justify-center">
+    <div class="mr-12">
+        <label for="book-select" class="mr-4">Choose a book:</label>
+        <select
+            name="book"
+            id="book-select"
+            class="text-indigo-400"
+            (change)="bookSelected($event)"
+        >
+            <option [value]="book.name" *ngFor="let book of books">
+                {{ book.name }}
+            </option>
+        </select>
+    </div>
+    <div>
+        <label for="chapter-select" class="mr-4">Choose a chapter:</label>
+        <select
+            name="chapter"
+            id="chapter-select"
+            class="text-indigo-400"
+            (change)="chapterSelected($event)"
+        >
+            <option
+                [value]="i + 1"
+                *ngFor="let chapter of chapters; let i = index"
+            >
+                Chapter {{ i + 1 }}
+            </option>
+        </select>
+    </div>
+</div>
+<p class="text-white text-2xl">
+    {{ selectedBook }} : {{ selectedChapter }} is selected
+</p>

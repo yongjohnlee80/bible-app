@@ -1,36 +1,41 @@
 <!-- Header -->
 <header id="header" class="bg-secondary">
-  <nav class="container mx-auto flex justify-start items-center py-8 px-4 text-gray-300">
-    <!-- App Name -->
-    <a class="text-3xl text-yellow-400 font-bold uppercase mr-4" href="index.html">BIBLE-APP</a>
+    <nav
+        class="container mx-auto flex justify-start items-center py-8 px-4 text-gray-300"
+    >
+        <!-- App Name -->
+        <a
+            class="text-3xl text-yellow-400 font-bold uppercase mr-4"
+            href="index.html"
+            >BIBLE-APP</a
+        >
 
-    <div class="flex justify-end flex-grow items-center">
-      <!-- Primary Navigation -->
-      <ul class="flex flex-row mt-1">
-        <!-- Navigation Links -->
-        <li *ngIf="!(auth.isAuthenticated$ | async); else authLinks">
-          <a class="px-2" href="#"
-            (click)="openModal($event)">
-            Login / Register
-          </a>
-        </li>
-        <ng-template #authLinks>
-          <li>
-            <a class="px-2" href="#">Prayers</a>
-          </li>
-          <li>
-            <a class="px-2" href="#">Notes</a>
-          </li>
-          <li>
-            <a class="px-2" href="#" (click)="logout($event)">
-              Logout
-            </a>
-          </li>
-        </ng-template>
-        <li>
-          <a class="px-2" href="about.html">About</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+        <div class="flex justify-end flex-grow items-center">
+            <!-- Primary Navigation -->
+            <ul class="flex flex-row mt-1">
+                <!-- Navigation Links -->
+                <li *ngIf="!(auth.isAuthenticated$ | async); else authLinks">
+                    <a class="px-2" href="#" (click)="openModal($event)">
+                        Login / Register
+                    </a>
+                </li>
+                <ng-template #authLinks>
+                    <li>
+                        <a class="px-2" href="#">Prayers</a>
+                    </li>
+                    <li>
+                        <a class="px-2" href="#">Notes</a>
+                    </li>
+                    <li>
+                        <a class="px-2" href="#" (click)="logout($event)">
+                            Logout
+                        </a>
+                    </li>
+                </ng-template>
+                <li>
+                    <a class="px-2" href="about.html">About</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 </header>

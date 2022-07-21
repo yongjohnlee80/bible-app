@@ -1,41 +1,54 @@
 <style>
-  .max-h-custom {
-    max-height: 75vh;
-  }
+    .max-h-custom {
+        max-height: 75vh;
+    }
 </style>
 
 <app-nav></app-nav>
 
 <!-- Intro Section -->
 <section class="relative overflow-hidden mb-2">
-  <!-- The video -->
-  <video autoplay muted loop playsinline class="w-full h-full object-cover absolute z-0">
-    <source src="assets/video/hero.mp4" type="video/mp4" />
-  </video>
+    <!-- The video -->
+    <video
+        autoplay
+        muted
+        loop
+        playsinline
+        class="w-full h-full object-cover absolute z-0"
+    >
+        <source src="assets/video/hero.mp4" type="video/mp4" />
+    </video>
 
-  <div class="bg-gradient absolute w-full h-full z-40 opacity-60"></div>
+    <div class="bg-gradient absolute w-full h-full z-40 opacity-60"></div>
 
-  <div class="w-full h-full absolute z-40">
-    <div class="cube"></div>
-    <div class="cube"></div>
-    <div class="cube"></div>
-    <div class="cube"></div>
-    <div class="cube"></div>
-  </div>
-
-  <div class="container mx-auto relative z-50">
-    <div class="text-gray-300 text-center px-20 py-60 w-full md:w-8/12 mx-auto">
-      <h1 class="text-5xl font-bold uppercase mb-2">Let's Read Bible Everyday</h1>
-      <p class="text-xl mt-8">
-        For God so loved the world, that he gave his one and only Son, that
-        whoever believes in him should not perish, but have eternal
-        life. - John 3:16
-      </p>
+    <div class="w-full h-full absolute z-40">
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
     </div>
-  </div>
+
+    <div class="container mx-auto relative z-50">
+        <div
+            class="text-gray-300 text-center px-20 py-60 w-full md:w-8/12 mx-auto"
+        >
+            <h1 class="text-5xl font-bold uppercase mb-2">
+                Let's Read Bible Everyday
+            </h1>
+            <p class="text-xl mt-8">
+                For God so loved the world, that he gave his one and only Son,
+                that whoever believes in him should not perish, but have eternal
+                life. - John 3:16
+            </p>
+        </div>
+    </div>
 </section>
 
 <!-- Main Content -->
 
+<app-bible-content></app-bible-content>
 
-<app-auth-modal *ngIf="!(auth.isAuthenticatedWithDelay$ | async)"></app-auth-modal>
+<app-auth-modal
+    *ngIf="!(auth.isAuthenticatedWithDelay$ | async)"
+></app-auth-modal>
