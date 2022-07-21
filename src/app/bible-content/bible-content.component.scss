@@ -6,6 +6,11 @@
     animation: fadeOut .5s ease-in;
 }
 
+.min-w-half {
+    min-width: 50vw;
+    overflow-x: hidden;
+}
+
 @keyframes fadeIn {
     0% {
         opacity: 0;
