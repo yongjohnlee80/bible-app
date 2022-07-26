@@ -5,3 +5,4 @@ export async function httpGetBibleText(book: string, chapter: number) {
     const result = await response.json();
     return result;
 }
+
