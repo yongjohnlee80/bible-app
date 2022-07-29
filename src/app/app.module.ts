@@ -13,9 +13,11 @@ import { UserModule } from './user/user.module';
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
 import { BibleContentComponent } from './bible-content/bible-content.component';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
-    declarations: [AppComponent, NavComponent, BibleContentComponent],
+    declarations: [AppComponent, NavComponent, BibleContentComponent, HomeComponent, AboutComponent],
     imports: [
         BrowserModule,
         AppRoutingModule,

@@ -6,7 +6,7 @@
         <!-- App Name -->
         <a
             class="text-3xl text-yellow-400 font-bold uppercase mr-4"
-            href="index.html"
+            routerLink="/"
             >BIBLE-APP</a
         >
 
@@ -32,8 +32,8 @@
                         </a>
                     </li>
                 </ng-template>
-                <li>
-                    <a class="px-2" href="about.html">About</a>
+                <li routerLinkActive="text-yellow-400" [routerLinkActiveOptions]="{ exact: true }">
+                    <a class="px-2" routerLink="/about" >About</a>
                 </li>
             </ul>
         </div>
